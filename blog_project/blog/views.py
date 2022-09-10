@@ -1,5 +1,14 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+from . models import Post
 
 
 def home_page(request):
-    return HttpResponse('<h1>Домашняя страница блога</h1>')
+    context = {
+        'posts': Post.objects.all()
+    }
+    return render(request, "blog/base.html", context)
+
+def about(request):
+    return render(request, "blog/about.html")
+
