@@ -29,7 +29,10 @@
             </div>
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
-
+              <!-- <a class="nav-item nav-link" href="#">Login</a>
+              <a class="nav-item nav-link" href="#">Register</a> -->
+              <!-- <button class="noselect">Create Post</button> -->
+<!--                <h3 style="color: white;">Hello {{request.user}}</h3>-->
                 <a href="{% url 'blog-new' %}" id="auth-links">
                 <span></span>
                 <span></span>
@@ -52,21 +55,27 @@
                 Logout
             </a>
                 {% else %}
-              <a href="" id="auth-links">
+              <a href="{% url 'login' %}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Login
             </a>
-            <a href="" id="auth-links">
+            <a href="{% url 'register' %}" id="auth-links">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Register
             </a>
-
+            <!-- <a href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Neon button
+            </a> -->
                 {% endif %}
             </div>
           </div>
@@ -89,7 +98,15 @@
         </div>
         <div class="col-md-4">
           <div class="content-sectionw">
-
+            <!-- <h3>Our Sidebar</h3>
+            <p class='text-muted'>You can put any information here you'd like.
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-light">Latest Posts</li>
+                <li class="list-group-item list-group-item-light">Announcements</li>
+                <li class="list-group-item list-group-item-light">Calendars</li>
+                <li class="list-group-item list-group-item-light">etc</li>
+              </ul>
+            </p> -->
             <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;" style="padding-top: 120px;">
                 <a id="list-group" style="text-decoration: none;" href="" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
                   <!-- <svg class="bi me-2" width="30" height="24"><use xlink:href="#bootstrap"/></svg> -->
@@ -98,25 +115,25 @@
                 <div class="list-group list-group-flush border-bottom scrollarea">
                   <a href="#" class="list-group-item list-group-item-action  lh-tight" aria-current="true">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                      <strong class="mb-1">Серьезно, перестаньте учить малышей программировать...
+                      <strong class="mb-1">Seriously, Stop Trying to Teach Toddlers How to Code...By Desphixs
                     </strong>
                       <small>Wed</small>
                     </div>
-                    <div class="col-10 mb-1 small">Культовый фильм 1995 года.</div>
+                    <div class="col-10 mb-1 small">AS A BABY nerd, I was obsessed with Hackers. The 1995 cult movie... </div>
                   </a>
                   <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                      <strong class="mb-1">Это не ошибка - это фича...</strong>
+                      <strong class="mb-1">Its not a bug - It's a feature... by Desphixs</strong>
                       <small class="text-muted">Tues</small>
                     </div>
-                    <div class="col-10 mb-1 small">Когда дело доходит до кодирования, все работает как чудо</div>
+                    <div class="col-10 mb-1 small">When it comes to coding, everything works like a miracle, let me use that word...hahaha</div>
                   </a>
                   <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
                     <div class="d-flex w-100 align-items-center justify-content-between">
-                      <strong class="mb-1">Я хотел стать отличным программистом, но... </strong>
+                      <strong class="mb-1">I wanted to be a great programmer but...by Desphixs</strong>
                       <small class="text-muted">Mon</small>
                     </div>
-                    <div class="col-10 mb-1 small">Моя семейная черта: никто ничего не знает о компьютерах, и я хотел стать величайшим компьютерщиком всех времен и....</div>
+                    <div class="col-10 mb-1 small">in my family trait, nobody knows anything about computers and i wanted to be the greatest computer scientist ever and...</div>
                   </a>
 
                 </div>
@@ -129,13 +146,13 @@
 
         <footer class="" >
           <ul class="nav justify-content-center border-bottom"  style="margin-top: 60px;">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Домой</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Посты</a></li>
-            <li class="nav-item"><a href="admin/" class="nav-link px-2 text-muted">Админ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="admin/" class="nav-link px-2 text-muted">Admin</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">О нас</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
           </ul>
-
+          <p class="text-center text-muted">&copy; Desphixs 2021</p>
         </footer>
 
     </main>
